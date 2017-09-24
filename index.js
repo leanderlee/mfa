@@ -37,8 +37,8 @@ program
   });
 
 program
-  .option('--no-copy')
-  .description('Show mfa for coinbase')
+  .option('--no-copy', 'No copying to clipboard')
+  .description('Show mfa for service')
   .action((service, cmd) => {
     const db = new DB(FILE);
     const data = db.readSync() || {};
